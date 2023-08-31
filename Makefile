@@ -1,13 +1,13 @@
 CC = g++
 CFlags = -g -Wall -Wextra
 
-default: helloworld
+default: main
 
-helloworld: main.o
+main: main.o
 	$(CC) $(CFlags) -o main main.o
 
 main.o: main.cpp
 	$(CC) $(CFlags) -c main.cpp
 
 clean:
-	$(RM) helloworld *.o *~
+	$(RM) main *.o *~
